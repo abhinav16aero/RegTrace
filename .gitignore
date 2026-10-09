@@ -1,0 +1,96 @@
+# Hackathon submission: include only application source and reproducible inputs.
+# New top-level paths are ignored until explicitly included here.
+/*
+!/.gitignore
+!/.env.example
+!/README.md
+!/LICENSE*
+!/Makefile
+!/pyproject.toml
+!/requirements.lock
+!/src/
+!/web/
+!/db/
+!/config/
+!/scripts/
+!/tests/
+!/data/
+!/.tools/
+
+# Keep the pinned Node installer manifests, never its installed runtime.
+/.tools/*
+!/.tools/package.json
+!/.tools/package-lock.json
+
+# Local-only development history, credentials and generated results.
+/.local/
+/.agents/
+/.codex/
+/.aws/
+/artifacts/
+/plans/
+/research/
+/docs/
+/*.pdf
+/data/evaluation/README.md
+
+# Installed dependencies, builds and caches.
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.vite/
+dist/
+build/
+*.tsbuildinfo
+
+# Test reports, logs, temporary files and database backups.
+coverage/
+.coverage
+.coverage.*
+htmlcov/
+test-results/
+playwright-report/
+blob-report/
+*.log
+*.pid
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.sql.gz
+
+# Secrets are private even if copied outside .local.
+.env
+.env.*
+!.env.example
+secrets.json
+secrets.*.json
+credentials.json
+credentials.*.json
+demo-users.json
+runtime.local.json
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+
+# Editor and OS metadata.
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,6 @@
+MERIDIAN DEMO BANK — FICTIONAL INTERNAL POLICY, VERSION 2
+Effective from 2026-09-01 until 2026-12-31.
+Control name: Record an approval timestamp strictly earlier than activation.
+Control scope: For every branch savings account opened for a resident individual by a scheduled commercial bank in India, Operations records an approval timestamp strictly earlier than the activation timestamp. This control operates from 2026-09-01 until 2026-12-31.
+Control owner: Branch Operations. Frequency: every account activation.
+Expected evidence: a CSV export for the supplied period containing case_id, review_at (approval timestamp), activation_at (activation timestamp), branch, product, customer_category, and reviewer (approving employee name). Compare the two timestamps for each case; approval must be strictly earlier than activation. The policy describes a fictional control. Its operation must be established from the sample, not this document alone.

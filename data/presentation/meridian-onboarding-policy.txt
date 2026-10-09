@@ -1,0 +1,4 @@
+MERIDIAN DEMO BANK — FICTIONAL INTERNAL POLICY
+Branch savings onboarding control, approved 2026-08-25. Applies to scheduled commercial banking in India, branch savings accounts for resident individuals.
+Control: Approval timing gate. Owner: Branch Operations. Frequency: every account activation.
+Operations records an approval timestamp strictly earlier than the activation timestamp for every branch savings account opened for a resident individual. The onboarding system blocks activation until the approval timestamp is recorded. The export contains case_id, review_at (approval timestamp), activation_at (activation timestamp), branch, product, customer_category and reviewer (approving employee name). Expected evidence is the complete activation export for the supplied sample period. This document describes a fictional control; its operation must be tested using evidence.

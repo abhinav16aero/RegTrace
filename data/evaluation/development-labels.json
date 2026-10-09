@@ -1,0 +1,77 @@
+{
+  "manifest_hash": "eb4d59526f6abc974d0ef8416f3b8e281f1a1e8e76f3dd8001569b766dd185b5",
+  "cases": [
+    {
+      "case_id": "pair-a-fail",
+      "review": {
+        "status": "draft",
+        "author": "agent-draft",
+        "reviewer": null,
+        "second_reviewer": null,
+        "reviewed_at": null,
+        "note": "Candidate atomic duties only. A human must check material qualifiers and add assessment decisions before scoring."
+      },
+      "obligations": [
+        {
+          "id": "g1",
+          "text": "A bank must verify each retail customer's identity before activating a deposit account.",
+          "quote": "A bank must verify each retail customer's identity before activating a deposit account."
+        },
+        {
+          "id": "g2",
+          "text": "A bank must retain the name of the employee who approved the identity verification.",
+          "quote": "A bank must retain the name of the employee who approved the identity verification."
+        }
+      ],
+      "decisions": []
+    },
+    {
+      "case_id": "pair-a-pass",
+      "review": {
+        "status": "draft",
+        "author": "agent-draft",
+        "reviewer": null,
+        "second_reviewer": null,
+        "reviewed_at": null,
+        "note": "Candidate atomic duties only. A human must check material qualifiers and add assessment decisions before scoring."
+      },
+      "obligations": [
+        {
+          "id": "g1",
+          "text": "A bank must verify each retail customer's identity before activating a deposit account.",
+          "quote": "A bank must verify each retail customer's identity before activating a deposit account."
+        },
+        {
+          "id": "g2",
+          "text": "A bank must retain the name of the employee who approved the identity verification.",
+          "quote": "A bank must retain the name of the employee who approved the identity verification."
+        }
+      ],
+      "decisions": []
+    },
+    {
+      "case_id": "pair-b-policy-only",
+      "review": {
+        "status": "draft",
+        "author": "agent-draft",
+        "reviewer": null,
+        "second_reviewer": null,
+        "reviewed_at": null,
+        "note": "Candidate atomic duties only. A human must check material qualifiers and add assessment decisions before scoring."
+      },
+      "obligations": [
+        {
+          "id": "g1",
+          "text": "A bank must retain account closure records for seven years after the account is closed.",
+          "quote": "A bank must retain account closure records for seven years after the account is closed."
+        },
+        {
+          "id": "g2",
+          "text": "The bank must suspend deletion when a preservation order applies, until the order is lifted.",
+          "quote": "The bank must suspend deletion when a preservation order applies, until the order is lifted."
+        }
+      ],
+      "decisions": []
+    }
+  ]
+}

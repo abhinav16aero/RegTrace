@@ -1,0 +1,9 @@
+{
+  "name": "Synthetic Retail Bank",
+  "jurisdiction": "India",
+  "entity_type": "scheduled commercial bank",
+  "products": ["retail deposit accounts"],
+  "customer_categories": ["resident adults"],
+  "channels": ["branch"],
+  "unknown_facts": []
+}

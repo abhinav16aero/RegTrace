@@ -1,0 +1,15 @@
+{
+  "name": "Meridian Demo Bank",
+  "jurisdiction": "India",
+  "entity_type": "scheduled commercial bank",
+  "products": [
+    "savings accounts"
+  ],
+  "channels": [
+    "branch"
+  ],
+  "customer_categories": [
+    "resident individuals"
+  ],
+  "unknown_facts": []
+}

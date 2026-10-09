@@ -1,0 +1,639 @@
+{
+  "schema_version": "1.0",
+  "synthetic": true,
+  "purpose": "Development fixture; never held-out evaluation evidence.",
+  "entities": [
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "SRC-REG-v1",
+      "lineage_id": "SRC-REG",
+      "version": 1,
+      "synthetic": true,
+      "kind": "source",
+      "title": "Fictional onboarding requirements",
+      "publisher": "Hackathon synthetic fixture",
+      "source_url": null,
+      "artifact_path": "data/fixtures/synthetic-regulation-v1.txt",
+      "sha256": "9c438ae9c823dc9f045fe45e238b564ca15ea1979301914d999d5f6096ef742d",
+      "text_path": "data/fixtures/synthetic-regulation-v1.txt",
+      "text_sha256": "9c438ae9c823dc9f045fe45e238b564ca15ea1979301914d999d5f6096ef742d",
+      "published_on": null,
+      "effective_on": null,
+      "current_law_status": "historical_snapshot",
+      "verified_as_of": null
+    },
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "SRC-POL-v1",
+      "lineage_id": "SRC-POL",
+      "version": 1,
+      "synthetic": true,
+      "kind": "source",
+      "title": "Fictional onboarding policy",
+      "publisher": "Hackathon synthetic fixture",
+      "source_url": null,
+      "artifact_path": "data/fixtures/synthetic-policy-v1.txt",
+      "sha256": "638d6ca66be2d7afc0f0e925dd0cf52bdc59623d318d34679b9dd9a6268568e5",
+      "text_path": "data/fixtures/synthetic-policy-v1.txt",
+      "text_sha256": "638d6ca66be2d7afc0f0e925dd0cf52bdc59623d318d34679b9dd9a6268568e5",
+      "published_on": null,
+      "effective_on": null,
+      "current_law_status": "historical_snapshot",
+      "verified_as_of": null
+    },
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "SPAN-O1-v1",
+      "lineage_id": "SPAN-O1",
+      "version": 1,
+      "synthetic": true,
+      "kind": "span",
+      "document_id": "SRC-REG-v1",
+      "page": null,
+      "section": "O-001",
+      "start": 51,
+      "end": 128,
+      "text": "O-001: Every onboarding case must have a documented review before activation."
+    },
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "SPAN-O2-v1",
+      "lineage_id": "SPAN-O2",
+      "version": 1,
+      "synthetic": true,
+      "kind": "span",
+      "document_id": "SRC-REG-v1",
+      "page": null,
+      "section": "O-002",
+      "start": 129,
+      "end": 197,
+      "text": "O-002: Every onboarding review must record the responsible reviewer."
+    },
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "SPAN-C1-v1",
+      "lineage_id": "SPAN-C1",
+      "version": 1,
+      "synthetic": true,
+      "kind": "span",
+      "document_id": "SRC-POL-v1",
+      "page": null,
+      "section": "C-001",
+      "start": 43,
+      "end": 168,
+      "text": "C-001: Onboarding operations records the responsible reviewer and completes the review before activating each retail account."
+    },
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "BANK-v1",
+      "lineage_id": "BANK",
+      "version": 1,
+      "synthetic": true,
+      "kind": "profile",
+      "name": "Example Retail Bank (fictional)",
+      "jurisdiction": "IN",
+      "entity_type": "scheduled_commercial_bank",
+      "products": [
+        "resident_individual_savings_accounts"
+      ],
+      "customer_categories": [
+        "resident_adult_individuals"
+      ],
+      "channels": [
+        "branch"
+      ],
+      "unknown_facts": [
+        "business_correspondent_use",
+        "foreign_branch_presence"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "O1-v1",
+      "lineage_id": "O1",
+      "version": 1,
+      "synthetic": true,
+      "kind": "obligation",
+      "actor": "Example Retail Bank",
+      "action": "complete documented review before activation",
+      "object": "retail account onboarding",
+      "conditions": [
+        "retail onboarding"
+      ],
+      "exceptions": [],
+      "timing": "before activation",
+      "span_ids": [
+        "SPAN-O1-v1"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "APP1-v1",
+      "lineage_id": "APP1",
+      "version": 1,
+      "synthetic": true,
+      "kind": "applicability",
+      "obligation_id": "O1-v1",
+      "profile_id": "BANK-v1",
+      "status": "applicable",
+      "reason": "Fictional requirements explicitly cover this fixture bank and product.",
+      "missing_facts": []
+    },
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "O2-v1",
+      "lineage_id": "O2",
+      "version": 1,
+      "synthetic": true,
+      "kind": "obligation",
+      "actor": "Example Retail Bank",
+      "action": "record responsible reviewer",
+      "object": "retail account onboarding review",
+      "conditions": [
+        "retail onboarding"
+      ],
+      "exceptions": [],
+      "timing": "at review",
+      "span_ids": [
+        "SPAN-O2-v1"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "APP2-v1",
+      "lineage_id": "APP2",
+      "version": 1,
+      "synthetic": true,
+      "kind": "applicability",
+      "obligation_id": "O2-v1",
+      "profile_id": "BANK-v1",
+      "status": "applicable",
+      "reason": "Fictional requirements explicitly cover this fixture bank and product.",
+      "missing_facts": []
+    },
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "C1-v1",
+      "lineage_id": "C1",
+      "version": 1,
+      "synthetic": true,
+      "kind": "control",
+      "name": "Pre-activation review",
+      "owner_role": "Onboarding operations",
+      "scope": "resident adult retail savings onboarding",
+      "frequency": "each onboarding",
+      "implementation": "implemented",
+      "expected_evidence": [
+        "reviewer identity",
+        "review and activation timestamps"
+      ],
+      "span_ids": [
+        "SPAN-C1-v1"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "MAP1-v1",
+      "lineage_id": "MAP1",
+      "version": 1,
+      "synthetic": true,
+      "kind": "mapping",
+      "obligation_id": "O1-v1",
+      "control_id": "C1-v1",
+      "clauses": [
+        {
+          "clause": "O1 requirement",
+          "status": "full",
+          "rationale": "The fictional policy explicitly describes this action."
+        }
+      ],
+      "verification": "supported"
+    },
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "MAP2-v1",
+      "lineage_id": "MAP2",
+      "version": 1,
+      "synthetic": true,
+      "kind": "mapping",
+      "obligation_id": "O2-v1",
+      "control_id": "C1-v1",
+      "clauses": [
+        {
+          "clause": "O2 requirement",
+          "status": "full",
+          "rationale": "The fictional policy explicitly describes this action."
+        }
+      ],
+      "verification": "supported"
+    },
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "EV1-v1",
+      "lineage_id": "EV1",
+      "version": 1,
+      "synthetic": true,
+      "kind": "evidence",
+      "control_id": "C1-v1",
+      "artifact_path": "data/fixtures/synthetic-evidence.csv",
+      "sha256": "8123f6b09340770058ce3111bbe6dcd49d213591e5d338a35fcc2837737d417b",
+      "producer": "synthetic-fixture-generator",
+      "collected_at": "2026-09-04T00:00:00Z",
+      "period_start": "2026-09-01T00:00:00Z",
+      "period_end": "2026-09-03T23:59:59Z"
+    },
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "TD1-v1",
+      "lineage_id": "TD1",
+      "version": 1,
+      "synthetic": true,
+      "kind": "test_definition",
+      "name": "Review precedes activation",
+      "procedure": "Parse timezone-aware timestamps and fail every case with review_at later than activation_at.",
+      "expected_outcome": "All selected records satisfy the declared condition.",
+      "sample_rule": "All three rows in synthetic-evidence.csv; no population extrapolation."
+    },
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "TR1-v1",
+      "lineage_id": "TR1",
+      "version": 1,
+      "synthetic": true,
+      "kind": "test_run",
+      "definition_id": "TD1-v1",
+      "control_id": "C1-v1",
+      "evidence_ids": [
+        "EV1-v1"
+      ],
+      "outcome": "fail",
+      "sample_size": 3,
+      "failed_case_ids": [
+        "CASE-002"
+      ],
+      "limitations": [
+        "Synthetic sample of three cases; does not establish real-bank effectiveness."
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "A1-v1",
+      "lineage_id": "A1",
+      "version": 1,
+      "synthetic": true,
+      "kind": "assessment",
+      "applicability_id": "APP1-v1",
+      "mapping_ids": [
+        "MAP1-v1"
+      ],
+      "evidence_ids": [
+        "EV1-v1"
+      ],
+      "test_run_ids": [
+        "TR1-v1"
+      ],
+      "states": {
+        "applicability": "applicable",
+        "coverage": "full",
+        "implementation": "implemented",
+        "evidence": "sufficient",
+        "test": "fail",
+        "verification": "supported",
+        "review": "pending",
+        "freshness": "current"
+      },
+      "rationale": "Full policy coverage does not override sample test outcomes. Reviewer approval remains pending."
+    },
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "TD2-v1",
+      "lineage_id": "TD2",
+      "version": 1,
+      "synthetic": true,
+      "kind": "test_definition",
+      "name": "Reviewer identity recorded",
+      "procedure": "Fail every case whose reviewer field is empty.",
+      "expected_outcome": "All selected records satisfy the declared condition.",
+      "sample_rule": "All three rows in synthetic-evidence.csv; no population extrapolation."
+    },
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "TR2-v1",
+      "lineage_id": "TR2",
+      "version": 1,
+      "synthetic": true,
+      "kind": "test_run",
+      "definition_id": "TD2-v1",
+      "control_id": "C1-v1",
+      "evidence_ids": [
+        "EV1-v1"
+      ],
+      "outcome": "pass",
+      "sample_size": 3,
+      "failed_case_ids": [],
+      "limitations": [
+        "Synthetic sample of three cases; does not establish real-bank effectiveness."
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "A2-v1",
+      "lineage_id": "A2",
+      "version": 1,
+      "synthetic": true,
+      "kind": "assessment",
+      "applicability_id": "APP2-v1",
+      "mapping_ids": [
+        "MAP2-v1"
+      ],
+      "evidence_ids": [
+        "EV1-v1"
+      ],
+      "test_run_ids": [
+        "TR2-v1"
+      ],
+      "states": {
+        "applicability": "applicable",
+        "coverage": "full",
+        "implementation": "implemented",
+        "evidence": "sufficient",
+        "test": "pass",
+        "verification": "supported",
+        "review": "pending",
+        "freshness": "current"
+      },
+      "rationale": "Full policy coverage does not override sample test outcomes. Reviewer approval remains pending."
+    },
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "G1-v1",
+      "lineage_id": "G1",
+      "version": 1,
+      "synthetic": true,
+      "kind": "gap",
+      "assessment_id": "A1-v1",
+      "gap_type": "execution_failure",
+      "description": "CASE-002 was activated before review."
+    },
+    {
+      "schema_version": "1.0",
+      "tenant_id": "demo-bank",
+      "id": "REM1-v1",
+      "lineage_id": "REM1",
+      "version": 1,
+      "synthetic": true,
+      "kind": "remediation",
+      "gap_id": "G1-v1",
+      "action": "Introduce a pre-activation review check and provide fresh execution evidence.",
+      "owner_role": "Onboarding operations",
+      "acceptance_criteria": [
+        "No activation precedes review in the defined retest sample.",
+        "Authorized reviewer approves retest evidence."
+      ],
+      "status": "proposed",
+      "retest_ids": [],
+      "review": "pending"
+    }
+  ],
+  "dependencies": [
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "SPAN-O1-v1",
+      "input_id": "SRC-REG-v1",
+      "relation": "derived_from"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "SPAN-O2-v1",
+      "input_id": "SRC-REG-v1",
+      "relation": "derived_from"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "SPAN-C1-v1",
+      "input_id": "SRC-POL-v1",
+      "relation": "derived_from"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "O1-v1",
+      "input_id": "SPAN-O1-v1",
+      "relation": "cites"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "APP1-v1",
+      "input_id": "O1-v1",
+      "relation": "applies_obligation"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "APP1-v1",
+      "input_id": "BANK-v1",
+      "relation": "uses_profile"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "O2-v1",
+      "input_id": "SPAN-O2-v1",
+      "relation": "cites"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "APP2-v1",
+      "input_id": "O2-v1",
+      "relation": "applies_obligation"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "APP2-v1",
+      "input_id": "BANK-v1",
+      "relation": "uses_profile"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "C1-v1",
+      "input_id": "SPAN-C1-v1",
+      "relation": "cites"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "MAP1-v1",
+      "input_id": "O1-v1",
+      "relation": "maps_obligation"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "MAP1-v1",
+      "input_id": "C1-v1",
+      "relation": "maps_control"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "MAP2-v1",
+      "input_id": "O2-v1",
+      "relation": "maps_obligation"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "MAP2-v1",
+      "input_id": "C1-v1",
+      "relation": "maps_control"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "EV1-v1",
+      "input_id": "C1-v1",
+      "relation": "evidences_control"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "TR1-v1",
+      "input_id": "TD1-v1",
+      "relation": "uses_definition"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "TR1-v1",
+      "input_id": "C1-v1",
+      "relation": "tests_control"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "TR1-v1",
+      "input_id": "EV1-v1",
+      "relation": "uses_evidence"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "A1-v1",
+      "input_id": "APP1-v1",
+      "relation": "assesses_applicability"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "A1-v1",
+      "input_id": "MAP1-v1",
+      "relation": "assesses_mapping"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "A1-v1",
+      "input_id": "EV1-v1",
+      "relation": "uses_evidence"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "A1-v1",
+      "input_id": "TR1-v1",
+      "relation": "uses_test"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "TR2-v1",
+      "input_id": "TD2-v1",
+      "relation": "uses_definition"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "TR2-v1",
+      "input_id": "C1-v1",
+      "relation": "tests_control"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "TR2-v1",
+      "input_id": "EV1-v1",
+      "relation": "uses_evidence"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "A2-v1",
+      "input_id": "APP2-v1",
+      "relation": "assesses_applicability"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "A2-v1",
+      "input_id": "MAP2-v1",
+      "relation": "assesses_mapping"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "A2-v1",
+      "input_id": "EV1-v1",
+      "relation": "uses_evidence"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "A2-v1",
+      "input_id": "TR2-v1",
+      "relation": "uses_test"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "G1-v1",
+      "input_id": "A1-v1",
+      "relation": "gap_in"
+    },
+    {
+      "tenant_id": "demo-bank",
+      "dependent_id": "REM1-v1",
+      "input_id": "G1-v1",
+      "relation": "remediates"
+    }
+  ],
+  "expected_queries": {
+    "assessment_provenance": [
+      "A1-v1",
+      "APP1-v1",
+      "BANK-v1",
+      "C1-v1",
+      "EV1-v1",
+      "MAP1-v1",
+      "O1-v1",
+      "SPAN-C1-v1",
+      "SPAN-O1-v1",
+      "SRC-POL-v1",
+      "SRC-REG-v1",
+      "TD1-v1",
+      "TR1-v1"
+    ],
+    "obligation_impact": [
+      "A1-v1",
+      "APP1-v1",
+      "C1-v1",
+      "G1-v1",
+      "MAP1-v1",
+      "O1-v1",
+      "REM1-v1"
+    ],
+    "shared_controls": [
+      [
+        "C1-v1",
+        "O1-v1,O2-v1"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+SIMULATED OPERATIONAL STANDARD — NOT LAW. This is an imaginary requirement for demonstrating sample testing only.
+For every branch savings account opened for a resident individual by a scheduled commercial bank in India, the bank must record review_at (approval timestamp) strictly earlier than activation_at (activation timestamp).

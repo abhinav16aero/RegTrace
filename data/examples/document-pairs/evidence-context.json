@@ -1,0 +1,7 @@
+{
+  "producer": "Synthetic Retail Bank onboarding log (demonstration data)",
+  "collected_at": "2026-09-03T00:00:00Z",
+  "period_start": "2026-09-01T00:00:00Z",
+  "period_end": "2026-09-03T00:00:00Z",
+  "scope": "All two resident-adult retail deposit account activations in this synthetic branch sample. Review and activation timestamps and reviewer names are recorded per case; no broader population or source authenticity is asserted."
+}

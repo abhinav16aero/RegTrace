@@ -1,0 +1,13 @@
+[project]
+name = "regtrace"
+version = "0.1.0"
+description = "Source-grounded regulatory assessment workbench"
+requires-python = ">=3.12,<3.13"
+dependencies = ["pydantic==2.13.5", "psycopg[binary]==3.3.6", "fastapi==0.141.1", "uvicorn==0.54.0", "pwdlib[argon2]==0.3.1", "httpx==0.28.1", "pypdf==6.19.0", "python-multipart==0.0.32"]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1", "httpx==0.28.1"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

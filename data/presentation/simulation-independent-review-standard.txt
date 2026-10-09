@@ -1,0 +1,4 @@
+SIMULATED INDEPENDENT REGULATORY INSTRUMENT — NOT LAW.
+Meridian presentation post-activation review standard. This is a separate imaginary instrument, not a version of the approval-timing standard.
+Effective from 2026-09-01 until 2026-12-31. Scope: scheduled commercial banks in India, branch savings accounts for resident individuals.
+A scheduled commercial bank in India must record an approval timestamp strictly later than the activation timestamp for every branch savings account opened for a resident individual.

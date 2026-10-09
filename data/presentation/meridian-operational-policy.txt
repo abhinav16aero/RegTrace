@@ -1,0 +1,5 @@
+MERIDIAN DEMO BANK — FICTIONAL INTERNAL POLICY
+Control name: Record review_at strictly earlier than activation_at.
+Scope: For every branch savings account opened for a resident individual by a scheduled commercial bank in India, the bank records review_at (approval timestamp) strictly earlier than activation_at (activation timestamp).
+Owner: Branch Operations. Frequency: every account activation.
+Expected evidence: the fictional onboarding CSV with unique case_id, review_at and activation_at, scoped to the declared reporting period. The sample test compares review_at strictly earlier than activation_at for every row. No assertion of identity authenticity or institution-wide compliance is made.

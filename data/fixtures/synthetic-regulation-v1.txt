@@ -1,0 +1,3 @@
+SYNTHETIC DEMONSTRATION REQUIREMENTS — NOT RBI LAW
+O-001: Every onboarding case must have a documented review before activation.
+O-002: Every onboarding review must record the responsible reviewer.

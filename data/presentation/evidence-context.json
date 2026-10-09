@@ -1,0 +1,7 @@
+{
+  "producer": "Meridian Demo Bank \u00b7 fictional operations export",
+  "scope": "40 fictional resident-individual savings account activations at branch MUM-01 during September 2026; approval timestamps only, not identity authenticity.",
+  "collected_at": "2026-10-01T06:30:00Z",
+  "period_start": "2026-09-01T00:00:00Z",
+  "period_end": "2026-09-30T23:59:59Z"
+}

@@ -1,0 +1,1698 @@
+{
+  "entity": {
+    "$defs": {
+      "Applicability": {
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "const": "1.0",
+            "default": "1.0",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "tenant_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Tenant Id",
+            "type": "string"
+          },
+          "id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Id",
+            "type": "string"
+          },
+          "lineage_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Lineage Id",
+            "type": "string"
+          },
+          "version": {
+            "minimum": 1,
+            "title": "Version",
+            "type": "integer"
+          },
+          "synthetic": {
+            "title": "Synthetic",
+            "type": "boolean"
+          },
+          "kind": {
+            "const": "applicability",
+            "title": "Kind",
+            "type": "string"
+          },
+          "obligation_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Obligation Id",
+            "type": "string"
+          },
+          "profile_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Profile Id",
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "applicable",
+              "not_applicable",
+              "unknown"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "reason": {
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          },
+          "missing_facts": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "title": "Missing Facts",
+            "type": "array"
+          }
+        },
+        "required": [
+          "tenant_id",
+          "id",
+          "lineage_id",
+          "version",
+          "synthetic",
+          "kind",
+          "obligation_id",
+          "profile_id",
+          "status",
+          "reason",
+          "missing_facts"
+        ],
+        "title": "Applicability",
+        "type": "object"
+      },
+      "Assessment": {
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "const": "1.0",
+            "default": "1.0",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "tenant_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Tenant Id",
+            "type": "string"
+          },
+          "id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Id",
+            "type": "string"
+          },
+          "lineage_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Lineage Id",
+            "type": "string"
+          },
+          "version": {
+            "minimum": 1,
+            "title": "Version",
+            "type": "integer"
+          },
+          "synthetic": {
+            "title": "Synthetic",
+            "type": "boolean"
+          },
+          "kind": {
+            "const": "assessment",
+            "title": "Kind",
+            "type": "string"
+          },
+          "applicability_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Applicability Id",
+            "type": "string"
+          },
+          "mapping_ids": {
+            "items": {
+              "maxLength": 160,
+              "minLength": 1,
+              "type": "string"
+            },
+            "title": "Mapping Ids",
+            "type": "array"
+          },
+          "evidence_ids": {
+            "items": {
+              "maxLength": 160,
+              "minLength": 1,
+              "type": "string"
+            },
+            "title": "Evidence Ids",
+            "type": "array"
+          },
+          "test_run_ids": {
+            "items": {
+              "maxLength": 160,
+              "minLength": 1,
+              "type": "string"
+            },
+            "title": "Test Run Ids",
+            "type": "array"
+          },
+          "states": {
+            "$ref": "#/$defs/AssessmentStates"
+          },
+          "rationale": {
+            "minLength": 1,
+            "title": "Rationale",
+            "type": "string"
+          }
+        },
+        "required": [
+          "tenant_id",
+          "id",
+          "lineage_id",
+          "version",
+          "synthetic",
+          "kind",
+          "applicability_id",
+          "mapping_ids",
+          "evidence_ids",
+          "test_run_ids",
+          "states",
+          "rationale"
+        ],
+        "title": "Assessment",
+        "type": "object"
+      },
+      "AssessmentStates": {
+        "additionalProperties": false,
+        "properties": {
+          "applicability": {
+            "enum": [
+              "applicable",
+              "not_applicable",
+              "unknown"
+            ],
+            "title": "Applicability",
+            "type": "string"
+          },
+          "coverage": {
+            "enum": [
+              "full",
+              "partial",
+              "none",
+              "unassessed"
+            ],
+            "title": "Coverage",
+            "type": "string"
+          },
+          "implementation": {
+            "enum": [
+              "documented_only",
+              "implemented",
+              "unknown"
+            ],
+            "title": "Implementation",
+            "type": "string"
+          },
+          "evidence": {
+            "enum": [
+              "sufficient",
+              "insufficient",
+              "conflicting",
+              "unassessed"
+            ],
+            "title": "Evidence",
+            "type": "string"
+          },
+          "test": {
+            "enum": [
+              "pass",
+              "fail",
+              "inconclusive",
+              "not_run"
+            ],
+            "title": "Test",
+            "type": "string"
+          },
+          "verification": {
+            "enum": [
+              "pending",
+              "supported",
+              "unsupported",
+              "conflicted"
+            ],
+            "title": "Verification",
+            "type": "string"
+          },
+          "review": {
+            "enum": [
+              "pending",
+              "approved",
+              "rejected",
+              "changes_requested"
+            ],
+            "title": "Review",
+            "type": "string"
+          },
+          "freshness": {
+            "enum": [
+              "current",
+              "stale",
+              "superseded"
+            ],
+            "title": "Freshness",
+            "type": "string"
+          }
+        },
+        "required": [
+          "applicability",
+          "coverage",
+          "implementation",
+          "evidence",
+          "test",
+          "verification",
+          "review",
+          "freshness"
+        ],
+        "title": "AssessmentStates",
+        "type": "object"
+      },
+      "BankProfile": {
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "const": "1.0",
+            "default": "1.0",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "tenant_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Tenant Id",
+            "type": "string"
+          },
+          "id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Id",
+            "type": "string"
+          },
+          "lineage_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Lineage Id",
+            "type": "string"
+          },
+          "version": {
+            "minimum": 1,
+            "title": "Version",
+            "type": "integer"
+          },
+          "synthetic": {
+            "title": "Synthetic",
+            "type": "boolean"
+          },
+          "kind": {
+            "const": "profile",
+            "title": "Kind",
+            "type": "string"
+          },
+          "name": {
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "jurisdiction": {
+            "minLength": 1,
+            "title": "Jurisdiction",
+            "type": "string"
+          },
+          "entity_type": {
+            "minLength": 1,
+            "title": "Entity Type",
+            "type": "string"
+          },
+          "products": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "title": "Products",
+            "type": "array"
+          },
+          "customer_categories": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "title": "Customer Categories",
+            "type": "array"
+          },
+          "channels": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "title": "Channels",
+            "type": "array"
+          },
+          "unknown_facts": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "title": "Unknown Facts",
+            "type": "array"
+          }
+        },
+        "required": [
+          "tenant_id",
+          "id",
+          "lineage_id",
+          "version",
+          "synthetic",
+          "kind",
+          "name",
+          "jurisdiction",
+          "entity_type",
+          "products",
+          "customer_categories",
+          "channels",
+          "unknown_facts"
+        ],
+        "title": "BankProfile",
+        "type": "object"
+      },
+      "ClauseCoverage": {
+        "additionalProperties": false,
+        "properties": {
+          "clause": {
+            "minLength": 1,
+            "title": "Clause",
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "full",
+              "partial",
+              "none",
+              "unassessed"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "rationale": {
+            "minLength": 1,
+            "title": "Rationale",
+            "type": "string"
+          }
+        },
+        "required": [
+          "clause",
+          "status",
+          "rationale"
+        ],
+        "title": "ClauseCoverage",
+        "type": "object"
+      },
+      "Control": {
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "const": "1.0",
+            "default": "1.0",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "tenant_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Tenant Id",
+            "type": "string"
+          },
+          "id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Id",
+            "type": "string"
+          },
+          "lineage_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Lineage Id",
+            "type": "string"
+          },
+          "version": {
+            "minimum": 1,
+            "title": "Version",
+            "type": "integer"
+          },
+          "synthetic": {
+            "title": "Synthetic",
+            "type": "boolean"
+          },
+          "kind": {
+            "const": "control",
+            "title": "Kind",
+            "type": "string"
+          },
+          "name": {
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "owner_role": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Owner Role"
+          },
+          "scope": {
+            "minLength": 1,
+            "title": "Scope",
+            "type": "string"
+          },
+          "frequency": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Frequency"
+          },
+          "implementation": {
+            "enum": [
+              "documented_only",
+              "implemented",
+              "unknown"
+            ],
+            "title": "Implementation",
+            "type": "string"
+          },
+          "expected_evidence": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "title": "Expected Evidence",
+            "type": "array"
+          },
+          "span_ids": {
+            "items": {
+              "maxLength": 160,
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Span Ids",
+            "type": "array"
+          }
+        },
+        "required": [
+          "tenant_id",
+          "id",
+          "lineage_id",
+          "version",
+          "synthetic",
+          "kind",
+          "name",
+          "owner_role",
+          "scope",
+          "frequency",
+          "implementation",
+          "expected_evidence",
+          "span_ids"
+        ],
+        "title": "Control",
+        "type": "object"
+      },
+      "Evidence": {
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "const": "1.0",
+            "default": "1.0",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "tenant_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Tenant Id",
+            "type": "string"
+          },
+          "id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Id",
+            "type": "string"
+          },
+          "lineage_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Lineage Id",
+            "type": "string"
+          },
+          "version": {
+            "minimum": 1,
+            "title": "Version",
+            "type": "integer"
+          },
+          "synthetic": {
+            "title": "Synthetic",
+            "type": "boolean"
+          },
+          "kind": {
+            "const": "evidence",
+            "title": "Kind",
+            "type": "string"
+          },
+          "control_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Control Id",
+            "type": "string"
+          },
+          "artifact_path": {
+            "minLength": 1,
+            "title": "Artifact Path",
+            "type": "string"
+          },
+          "sha256": {
+            "pattern": "^[a-f0-9]{64}$",
+            "title": "Sha256",
+            "type": "string"
+          },
+          "producer": {
+            "minLength": 1,
+            "title": "Producer",
+            "type": "string"
+          },
+          "collected_at": {
+            "format": "date-time",
+            "title": "Collected At",
+            "type": "string"
+          },
+          "period_start": {
+            "format": "date-time",
+            "title": "Period Start",
+            "type": "string"
+          },
+          "period_end": {
+            "format": "date-time",
+            "title": "Period End",
+            "type": "string"
+          }
+        },
+        "required": [
+          "tenant_id",
+          "id",
+          "lineage_id",
+          "version",
+          "synthetic",
+          "kind",
+          "control_id",
+          "artifact_path",
+          "sha256",
+          "producer",
+          "collected_at",
+          "period_start",
+          "period_end"
+        ],
+        "title": "Evidence",
+        "type": "object"
+      },
+      "Gap": {
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "const": "1.0",
+            "default": "1.0",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "tenant_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Tenant Id",
+            "type": "string"
+          },
+          "id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Id",
+            "type": "string"
+          },
+          "lineage_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Lineage Id",
+            "type": "string"
+          },
+          "version": {
+            "minimum": 1,
+            "title": "Version",
+            "type": "integer"
+          },
+          "synthetic": {
+            "title": "Synthetic",
+            "type": "boolean"
+          },
+          "kind": {
+            "const": "gap",
+            "title": "Kind",
+            "type": "string"
+          },
+          "assessment_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Assessment Id",
+            "type": "string"
+          },
+          "gap_type": {
+            "enum": [
+              "missing_control",
+              "partial_coverage",
+              "policy_only",
+              "missing_evidence",
+              "conflicting_evidence",
+              "execution_failure",
+              "unknown_applicability"
+            ],
+            "title": "Gap Type",
+            "type": "string"
+          },
+          "description": {
+            "minLength": 1,
+            "title": "Description",
+            "type": "string"
+          }
+        },
+        "required": [
+          "tenant_id",
+          "id",
+          "lineage_id",
+          "version",
+          "synthetic",
+          "kind",
+          "assessment_id",
+          "gap_type",
+          "description"
+        ],
+        "title": "Gap",
+        "type": "object"
+      },
+      "Mapping": {
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "const": "1.0",
+            "default": "1.0",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "tenant_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Tenant Id",
+            "type": "string"
+          },
+          "id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Id",
+            "type": "string"
+          },
+          "lineage_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Lineage Id",
+            "type": "string"
+          },
+          "version": {
+            "minimum": 1,
+            "title": "Version",
+            "type": "integer"
+          },
+          "synthetic": {
+            "title": "Synthetic",
+            "type": "boolean"
+          },
+          "kind": {
+            "const": "mapping",
+            "title": "Kind",
+            "type": "string"
+          },
+          "obligation_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Obligation Id",
+            "type": "string"
+          },
+          "control_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Control Id",
+            "type": "string"
+          },
+          "clauses": {
+            "items": {
+              "$ref": "#/$defs/ClauseCoverage"
+            },
+            "minItems": 1,
+            "title": "Clauses",
+            "type": "array"
+          },
+          "verification": {
+            "enum": [
+              "pending",
+              "supported",
+              "unsupported",
+              "conflicted"
+            ],
+            "title": "Verification",
+            "type": "string"
+          }
+        },
+        "required": [
+          "tenant_id",
+          "id",
+          "lineage_id",
+          "version",
+          "synthetic",
+          "kind",
+          "obligation_id",
+          "control_id",
+          "clauses",
+          "verification"
+        ],
+        "title": "Mapping",
+        "type": "object"
+      },
+      "Obligation": {
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "const": "1.0",
+            "default": "1.0",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "tenant_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Tenant Id",
+            "type": "string"
+          },
+          "id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Id",
+            "type": "string"
+          },
+          "lineage_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Lineage Id",
+            "type": "string"
+          },
+          "version": {
+            "minimum": 1,
+            "title": "Version",
+            "type": "integer"
+          },
+          "synthetic": {
+            "title": "Synthetic",
+            "type": "boolean"
+          },
+          "kind": {
+            "const": "obligation",
+            "title": "Kind",
+            "type": "string"
+          },
+          "actor": {
+            "minLength": 1,
+            "title": "Actor",
+            "type": "string"
+          },
+          "action": {
+            "minLength": 1,
+            "title": "Action",
+            "type": "string"
+          },
+          "object": {
+            "minLength": 1,
+            "title": "Object",
+            "type": "string"
+          },
+          "conditions": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "title": "Conditions",
+            "type": "array"
+          },
+          "exceptions": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "title": "Exceptions",
+            "type": "array"
+          },
+          "timing": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Timing"
+          },
+          "span_ids": {
+            "items": {
+              "maxLength": 160,
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Span Ids",
+            "type": "array"
+          }
+        },
+        "required": [
+          "tenant_id",
+          "id",
+          "lineage_id",
+          "version",
+          "synthetic",
+          "kind",
+          "actor",
+          "action",
+          "object",
+          "conditions",
+          "exceptions",
+          "timing",
+          "span_ids"
+        ],
+        "title": "Obligation",
+        "type": "object"
+      },
+      "Remediation": {
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "const": "1.0",
+            "default": "1.0",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "tenant_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Tenant Id",
+            "type": "string"
+          },
+          "id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Id",
+            "type": "string"
+          },
+          "lineage_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Lineage Id",
+            "type": "string"
+          },
+          "version": {
+            "minimum": 1,
+            "title": "Version",
+            "type": "integer"
+          },
+          "synthetic": {
+            "title": "Synthetic",
+            "type": "boolean"
+          },
+          "kind": {
+            "const": "remediation",
+            "title": "Kind",
+            "type": "string"
+          },
+          "gap_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Gap Id",
+            "type": "string"
+          },
+          "action": {
+            "minLength": 1,
+            "title": "Action",
+            "type": "string"
+          },
+          "owner_role": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Owner Role"
+          },
+          "acceptance_criteria": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Acceptance Criteria",
+            "type": "array"
+          },
+          "status": {
+            "enum": [
+              "proposed",
+              "accepted",
+              "in_progress",
+              "awaiting_retest",
+              "closed",
+              "reopened"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "retest_ids": {
+            "items": {
+              "maxLength": 160,
+              "minLength": 1,
+              "type": "string"
+            },
+            "title": "Retest Ids",
+            "type": "array"
+          },
+          "review": {
+            "enum": [
+              "pending",
+              "approved",
+              "rejected",
+              "changes_requested"
+            ],
+            "title": "Review",
+            "type": "string"
+          }
+        },
+        "required": [
+          "tenant_id",
+          "id",
+          "lineage_id",
+          "version",
+          "synthetic",
+          "kind",
+          "gap_id",
+          "action",
+          "owner_role",
+          "acceptance_criteria",
+          "status",
+          "retest_ids",
+          "review"
+        ],
+        "title": "Remediation",
+        "type": "object"
+      },
+      "SourceDocument": {
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "const": "1.0",
+            "default": "1.0",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "tenant_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Tenant Id",
+            "type": "string"
+          },
+          "id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Id",
+            "type": "string"
+          },
+          "lineage_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Lineage Id",
+            "type": "string"
+          },
+          "version": {
+            "minimum": 1,
+            "title": "Version",
+            "type": "integer"
+          },
+          "synthetic": {
+            "title": "Synthetic",
+            "type": "boolean"
+          },
+          "kind": {
+            "const": "source",
+            "title": "Kind",
+            "type": "string"
+          },
+          "title": {
+            "minLength": 1,
+            "title": "Title",
+            "type": "string"
+          },
+          "publisher": {
+            "minLength": 1,
+            "title": "Publisher",
+            "type": "string"
+          },
+          "source_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Url"
+          },
+          "artifact_path": {
+            "minLength": 1,
+            "title": "Artifact Path",
+            "type": "string"
+          },
+          "sha256": {
+            "pattern": "^[a-f0-9]{64}$",
+            "title": "Sha256",
+            "type": "string"
+          },
+          "text_path": {
+            "minLength": 1,
+            "title": "Text Path",
+            "type": "string"
+          },
+          "text_sha256": {
+            "pattern": "^[a-f0-9]{64}$",
+            "title": "Text Sha256",
+            "type": "string"
+          },
+          "published_on": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Published On"
+          },
+          "effective_on": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Effective On"
+          },
+          "current_law_status": {
+            "enum": [
+              "not_verified",
+              "historical_snapshot",
+              "verified_as_of"
+            ],
+            "title": "Current Law Status",
+            "type": "string"
+          },
+          "verified_as_of": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Verified As Of"
+          }
+        },
+        "required": [
+          "tenant_id",
+          "id",
+          "lineage_id",
+          "version",
+          "synthetic",
+          "kind",
+          "title",
+          "publisher",
+          "source_url",
+          "artifact_path",
+          "sha256",
+          "text_path",
+          "text_sha256",
+          "published_on",
+          "effective_on",
+          "current_law_status"
+        ],
+        "title": "SourceDocument",
+        "type": "object"
+      },
+      "SourceSpan": {
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "const": "1.0",
+            "default": "1.0",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "tenant_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Tenant Id",
+            "type": "string"
+          },
+          "id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Id",
+            "type": "string"
+          },
+          "lineage_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Lineage Id",
+            "type": "string"
+          },
+          "version": {
+            "minimum": 1,
+            "title": "Version",
+            "type": "integer"
+          },
+          "synthetic": {
+            "title": "Synthetic",
+            "type": "boolean"
+          },
+          "kind": {
+            "const": "span",
+            "title": "Kind",
+            "type": "string"
+          },
+          "document_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Document Id",
+            "type": "string"
+          },
+          "page": {
+            "anyOf": [
+              {
+                "minimum": 1,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Page"
+          },
+          "section": {
+            "minLength": 1,
+            "title": "Section",
+            "type": "string"
+          },
+          "start": {
+            "minimum": 0,
+            "title": "Start",
+            "type": "integer"
+          },
+          "end": {
+            "exclusiveMinimum": 0,
+            "title": "End",
+            "type": "integer"
+          },
+          "text": {
+            "minLength": 1,
+            "title": "Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "tenant_id",
+          "id",
+          "lineage_id",
+          "version",
+          "synthetic",
+          "kind",
+          "document_id",
+          "page",
+          "section",
+          "start",
+          "end",
+          "text"
+        ],
+        "title": "SourceSpan",
+        "type": "object"
+      },
+      "TestDefinition": {
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "const": "1.0",
+            "default": "1.0",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "tenant_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Tenant Id",
+            "type": "string"
+          },
+          "id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Id",
+            "type": "string"
+          },
+          "lineage_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Lineage Id",
+            "type": "string"
+          },
+          "version": {
+            "minimum": 1,
+            "title": "Version",
+            "type": "integer"
+          },
+          "synthetic": {
+            "title": "Synthetic",
+            "type": "boolean"
+          },
+          "kind": {
+            "const": "test_definition",
+            "title": "Kind",
+            "type": "string"
+          },
+          "name": {
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "procedure": {
+            "minLength": 1,
+            "title": "Procedure",
+            "type": "string"
+          },
+          "expected_outcome": {
+            "minLength": 1,
+            "title": "Expected Outcome",
+            "type": "string"
+          },
+          "sample_rule": {
+            "minLength": 1,
+            "title": "Sample Rule",
+            "type": "string"
+          }
+        },
+        "required": [
+          "tenant_id",
+          "id",
+          "lineage_id",
+          "version",
+          "synthetic",
+          "kind",
+          "name",
+          "procedure",
+          "expected_outcome",
+          "sample_rule"
+        ],
+        "title": "TestDefinition",
+        "type": "object"
+      },
+      "TestRun": {
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "const": "1.0",
+            "default": "1.0",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "tenant_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Tenant Id",
+            "type": "string"
+          },
+          "id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Id",
+            "type": "string"
+          },
+          "lineage_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Lineage Id",
+            "type": "string"
+          },
+          "version": {
+            "minimum": 1,
+            "title": "Version",
+            "type": "integer"
+          },
+          "synthetic": {
+            "title": "Synthetic",
+            "type": "boolean"
+          },
+          "kind": {
+            "const": "test_run",
+            "title": "Kind",
+            "type": "string"
+          },
+          "definition_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Definition Id",
+            "type": "string"
+          },
+          "control_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Control Id",
+            "type": "string"
+          },
+          "evidence_ids": {
+            "items": {
+              "maxLength": 160,
+              "minLength": 1,
+              "type": "string"
+            },
+            "title": "Evidence Ids",
+            "type": "array"
+          },
+          "outcome": {
+            "enum": [
+              "pass",
+              "fail",
+              "inconclusive",
+              "not_run"
+            ],
+            "title": "Outcome",
+            "type": "string"
+          },
+          "sample_size": {
+            "minimum": 0,
+            "title": "Sample Size",
+            "type": "integer"
+          },
+          "failed_case_ids": {
+            "items": {
+              "maxLength": 160,
+              "minLength": 1,
+              "type": "string"
+            },
+            "title": "Failed Case Ids",
+            "type": "array"
+          },
+          "limitations": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Limitations",
+            "type": "array"
+          }
+        },
+        "required": [
+          "tenant_id",
+          "id",
+          "lineage_id",
+          "version",
+          "synthetic",
+          "kind",
+          "definition_id",
+          "control_id",
+          "evidence_ids",
+          "outcome",
+          "sample_size",
+          "failed_case_ids",
+          "limitations"
+        ],
+        "title": "TestRun",
+        "type": "object"
+      }
+    },
+    "discriminator": {
+      "mapping": {
+        "applicability": "#/$defs/Applicability",
+        "assessment": "#/$defs/Assessment",
+        "control": "#/$defs/Control",
+        "evidence": "#/$defs/Evidence",
+        "gap": "#/$defs/Gap",
+        "mapping": "#/$defs/Mapping",
+        "obligation": "#/$defs/Obligation",
+        "profile": "#/$defs/BankProfile",
+        "remediation": "#/$defs/Remediation",
+        "source": "#/$defs/SourceDocument",
+        "span": "#/$defs/SourceSpan",
+        "test_definition": "#/$defs/TestDefinition",
+        "test_run": "#/$defs/TestRun"
+      },
+      "propertyName": "kind"
+    },
+    "oneOf": [
+      {
+        "$ref": "#/$defs/SourceDocument"
+      },
+      {
+        "$ref": "#/$defs/SourceSpan"
+      },
+      {
+        "$ref": "#/$defs/BankProfile"
+      },
+      {
+        "$ref": "#/$defs/Obligation"
+      },
+      {
+        "$ref": "#/$defs/Control"
+      },
+      {
+        "$ref": "#/$defs/Applicability"
+      },
+      {
+        "$ref": "#/$defs/Mapping"
+      },
+      {
+        "$ref": "#/$defs/Evidence"
+      },
+      {
+        "$ref": "#/$defs/TestDefinition"
+      },
+      {
+        "$ref": "#/$defs/TestRun"
+      },
+      {
+        "$ref": "#/$defs/Assessment"
+      },
+      {
+        "$ref": "#/$defs/Gap"
+      },
+      {
+        "$ref": "#/$defs/Remediation"
+      }
+    ]
+  },
+  "step_result": {
+    "additionalProperties": false,
+    "properties": {
+      "schema_version": {
+        "const": "1.0",
+        "default": "1.0",
+        "title": "Schema Version",
+        "type": "string"
+      },
+      "tenant_id": {
+        "maxLength": 160,
+        "minLength": 1,
+        "title": "Tenant Id",
+        "type": "string"
+      },
+      "run_id": {
+        "maxLength": 160,
+        "minLength": 1,
+        "title": "Run Id",
+        "type": "string"
+      },
+      "step_id": {
+        "maxLength": 160,
+        "minLength": 1,
+        "title": "Step Id",
+        "type": "string"
+      },
+      "input_ids": {
+        "items": {
+          "maxLength": 160,
+          "minLength": 1,
+          "type": "string"
+        },
+        "title": "Input Ids",
+        "type": "array"
+      },
+      "input_hash": {
+        "pattern": "^[a-f0-9]{64}$",
+        "title": "Input Hash",
+        "type": "string"
+      },
+      "configuration_hash": {
+        "pattern": "^[a-f0-9]{64}$",
+        "title": "Configuration Hash",
+        "type": "string"
+      },
+      "status": {
+        "enum": [
+          "completed",
+          "needs_review",
+          "failed",
+          "cancelled"
+        ],
+        "title": "Status",
+        "type": "string"
+      },
+      "output_ids": {
+        "items": {
+          "maxLength": 160,
+          "minLength": 1,
+          "type": "string"
+        },
+        "title": "Output Ids",
+        "type": "array"
+      },
+      "unresolved_questions": {
+        "items": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "title": "Unresolved Questions",
+        "type": "array"
+      },
+      "error_code": {
+        "anyOf": [
+          {
+            "minLength": 1,
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Error Code"
+      }
+    },
+    "required": [
+      "tenant_id",
+      "run_id",
+      "step_id",
+      "input_ids",
+      "input_hash",
+      "configuration_hash",
+      "status",
+      "output_ids",
+      "unresolved_questions",
+      "error_code"
+    ],
+    "title": "StepResult",
+    "type": "object"
+  },
+  "dependency": {
+    "additionalProperties": false,
+    "properties": {
+      "tenant_id": {
+        "maxLength": 160,
+        "minLength": 1,
+        "title": "Tenant Id",
+        "type": "string"
+      },
+      "dependent_id": {
+        "maxLength": 160,
+        "minLength": 1,
+        "title": "Dependent Id",
+        "type": "string"
+      },
+      "input_id": {
+        "maxLength": 160,
+        "minLength": 1,
+        "title": "Input Id",
+        "type": "string"
+      },
+      "relation": {
+        "enum": [
+          "cites",
+          "derived_from",
+          "applies_obligation",
+          "uses_profile",
+          "maps_obligation",
+          "maps_control",
+          "evidences_control",
+          "uses_definition",
+          "tests_control",
+          "uses_evidence",
+          "assesses_applicability",
+          "assesses_mapping",
+          "uses_test",
+          "gap_in",
+          "remediates"
+        ],
+        "title": "Relation",
+        "type": "string"
+      }
+    },
+    "required": [
+      "tenant_id",
+      "dependent_id",
+      "input_id",
+      "relation"
+    ],
+    "title": "Dependency",
+    "type": "object"
+  }
+}

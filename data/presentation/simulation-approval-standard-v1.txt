@@ -1,0 +1,4 @@
+SIMULATED REGULATORY INSTRUMENT — NOT LAW.
+Meridian presentation approval-timing standard, version 1.
+Effective from 2026-09-01 until 2026-12-31. Scope: scheduled commercial banks in India, branch savings accounts for resident individuals.
+A scheduled commercial bank in India must record an approval timestamp strictly earlier than the activation timestamp for every branch savings account opened for a resident individual.

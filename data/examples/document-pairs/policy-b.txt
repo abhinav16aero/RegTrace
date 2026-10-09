@@ -1,0 +1,3 @@
+SYNTHETIC BANK POLICY B.
+The records manager deletes account closure records five years after closure.
+The legal team can mark a record as subject to a preservation order. Marked records are excluded from scheduled deletion until the legal team releases the hold.

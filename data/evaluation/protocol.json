@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "protocol_id": "holdout-v1",
+  "frozen_on": "2026-09-29",
+  "status": "protocol_frozen_dataset_not_populated",
+  "seed": 20260929,
+  "split_unit": "connected regulatory document family including all amendments, versions and obligation paraphrases",
+  "development_families": [
+    "rbi-commercial-bank-kyc-lineage",
+    "synthetic-onboarding-v1"
+  ],
+  "assignment": "Sort canonical family IDs not used in development by SHA256(protocol_id + family_id); assign the first ceil(0.3*N) whole families to heldout, the remainder to development; preserve assignments in a versioned split manifest before tuning.",
+  "minimum_independent_families": 3,
+  "minimum_total_obligation_cases": 30,
+  "minimum_total_mapping_evidence_decisions": 60,
+  "minimum_heldout_obligation_cases": 10,
+  "minimum_heldout_mapping_evidence_decisions": 20,
+  "current_heldout_case_count": 0,
+  "human_adjudication_required": true,
+  "critical_cases": [
+    "missing_evidence",
+    "stale_evidence",
+    "conflicting_evidence",
+    "policy_only",
+    "failed_execution",
+    "unknown_applicability",
+    "agreement_without_support",
+    "withdrawn_source"
+  ],
+  "thresholds": {
+    "obligation_precision": 0.9,
+    "obligation_recall": 0.85,
+    "full_mapping_precision": 0.9,
+    "critical_false_passes": 0
+  },
+  "report_also": [
+    "sample_counts",
+    "label_disagreements",
+    "partial_and_missing_mapping_outcomes",
+    "citation_resolution",
+    "citation_support",
+    "abstention",
+    "coverage",
+    "latency",
+    "cost"
+  ],
+  "after_holdout_inspection": "If results guide tuning, retire those cases to development and collect a fresh independent final holdout.",
+  "claims_limit": "No measured reliability claim before independently reviewed labels and held-out evaluation exist."
+}

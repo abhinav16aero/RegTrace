@@ -1,0 +1,13 @@
+{
+  "label": "Official RBI excerpt \u00b7 pinned snapshot",
+  "publisher": "Reserve Bank of India",
+  "original_sha256": "54a8672ca968129a020222604bbf72ae3c38ece9fb70ab76bed5a1a81bc60490",
+  "original_page": "23",
+  "original_start": "69",
+  "original_end": "219",
+  "quote": "21. The bank shall undertake identification of customers in the following cases: \n(1) Commencement of an account-based relationship with the customer.",
+  "source_url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13141",
+  "retrieved_at": "2026-09-29T13:49:56.385386+00:00",
+  "current_law_status": "Pinned 2026-09-29 snapshot; legal currency not exhaustively verified",
+  "scope": "Paragraph 21 introduction and clause (1) only; other triggers and the rest of the directions are outside this excerpt."
+}

@@ -1,0 +1,119 @@
+RBI/2025-26/51
+DOR.AML.REC.30/14.01.001/2025-26                                           June 12, 2025
+
+         Reserve Bank of India (Know Your Customer (KYC)) (Amendment)
+                                Directions, 2025
+
+Reserve Bank had issued Reserve Bank of India (Know Your Customer (KYC)) Directions,
+2016 (hereinafter referred to as Master Direction) in compliance of the provisions of the
+PML Act, 2002 and the Rules made thereunder. There is a need to further amend the
+same in order to enhance consumer protection and service.
+
+2. Accordingly, in exercise of the powers conferred by sections 35A of the Banking
+Regulation Act, 1949, read with section 56 of the Act ibid, sections 45JA, 45K and 45L of
+                                             n
+the Reserve Bank of India Act,1934, section 10(2) read with section 18 of Payment and
+                                           aw
+
+Settlement Systems Act, 2007, section 11(1) of the Foreign Exchange Management Act,
+                                       dr
+
+
+1999, Rule 9(14) of Prevention of Money-Laundering (Maintenance of Records) Rules,
+                                    ith
+
+
+
+
+2005 and all other laws enabling the Reserve Bank in this regard, the Reserve Bank
+                                W
+
+
+
+
+being satisfied that it is necessary and expedient in the public interest to do so, hereby
+issues the Amendment Directions hereinafter specified.
+
+3. (i) These Directions shall be called the Reserve Bank of India (Know Your Customer
+(KYC)) (Amendment) Directions, 2025.
+(ii) These directions shall come into force with immediate effect.
+
+4. These Amendment Directions modify the Reserve Bank of India (Know Your Customer
+(KYC)) Directions, 2016 as under:
+
+(i)    In the paragraph 38 of the Master Direction, a new clause shall be inserted before
+paragraph 38(a), namely:
+
+“Notwithstanding the provisions given above, in respect of an individual customer who is
+categorized as low risk, the RE shall allow all transactions and ensure the updation of
+KYC within one year of its falling due for KYC or upto June 30, 2026, whichever is later.
+The RE shall subject accounts of such customers to regular monitoring. This shall also
+be applicable to low-risk individual customers for whom periodic updation of KYC has
+already fallen due.”.
+
+(ii)   After paragraph 38(a)(ii), the following paragraph 38(a)(iia) shall be inserted,
+namely:-
+
+“38(a)(iia) Use of Business Correspondent (BC) by banks for Updation/ Periodic
+Updation of KYC
+
+Self-declaration from the customer in case of no change in KYC information or change
+only in the address details may be obtained through an authorized BC of the bank. The
+bank shall enable its BC systems for recording these self-declarations and supporting
+documents thereof in electronic form in the bank’s systems.
+
+The bank shall obtain the self-declaration including the supporting documents, if required,
+                                             n
+                                           aw
+
+in the electronic mode from the customer through the BC, after successful biometric
+                                       dr
+
+
+based e-KYC authentication. Until an option is made available in the electronic mode,
+                                    ith
+
+
+
+
+such declaration may be submitted in physical form by the customer. The BC shall
+                                W
+
+
+
+
+authenticate the self-declaration and supporting documents submitted in person by the
+customer, and promptly forward the same to the concerned bank branch. The BC shall
+provide the customer an acknowledgment of receipt of such declaration /submission of
+documents.
+
+The bank shall update the customer’s KYC records and intimate the customer once the
+records get updated in the system, as required under paragraph 38(c) of the Master
+Direction ibid. It is, however, reiterated that the ultimate responsibility for periodic
+updation of KYC remains with the bank concerned.”.
+
+(iii) After paragraph 38(d), the following paragraph 38(e) shall be inserted, namely: -
+
+“38(e) Due Notices for Periodic Updation of KYC
+The RE shall intimate its customers, in advance, to update their KYC. Prior to the due
+date of periodic updation of KYC, the RE shall give at least three advance intimations,
+including at least one intimation by letter, at appropriate intervals to its customers through
+available communication options/ channels for complying with the requirement of periodic
+updation of KYC. Subsequent to the due date, the RE shall give at least three reminders,
+including at least one reminder by letter, at appropriate intervals, to such customers who
+have still not complied with the requirements, despite advance intimations. The letter of
+intimation/ reminder may, inter alia, contain easy to understand instructions for updating
+KYC, escalation mechanism for seeking help, if required, and the consequences, if any,
+of failure to update their KYC in time. Issue of such advance intimation/ reminder shall
+be duly recorded in the RE's system against each customer for audit trail. The RE shall
+expeditiously implement the same but not later than January 01, 2026.”.
+
+
+(Usha Janakiraman)
+Chief General Manager-in-Charge
+                                              n
+                                            aw
+                                        dr
+                                     ith
+                                 W
+

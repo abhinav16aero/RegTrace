@@ -1,0 +1,2 @@
+SYNTHETIC INTERNAL POLICY — FICTIONAL BANK
+C-001: Onboarding operations records the responsible reviewer and completes the review before activating each retail account.

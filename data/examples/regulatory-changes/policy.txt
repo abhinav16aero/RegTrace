@@ -1,0 +1,3 @@
+SYNTHETIC BANK POLICY. Demonstration data.
+The branch operations officer verifies identity documents before activating each retail deposit account.
+The onboarding log records the verification and activation timestamps. This policy does not require recording the approving employee's name.

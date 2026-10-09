@@ -1,0 +1,24 @@
+{
+  "version": "meridian-v1",
+  "tenant": "meridian-demo",
+  "files": {
+    "DATA-DICTIONARY.md": "8a1fb8bf1ea9f5184d57d37cad9ff587762619ff2faead8c6e5108e314631fe5",
+    "evidence-context.json": "77e9b6918a894f1a92afc1fbd6cb4a14d83fdfe31ff79445d1adc782365735a4",
+    "meridian-kyc-policy-gap.txt": "739028c5e575537ba7aede8872c4dd954d88e05eff612765a29c64b508dbc0f3",
+    "meridian-onboarding-policy-v2.txt": "8b956c2fe35f620957f5899996522d65353d479fde72b65d976efe453e60b1e0",
+    "meridian-onboarding-policy.txt": "8fcb83c8b0f6599f63797a05a3b27ab8c57bb641a4593684eb29ec1b1f241bea",
+    "meridian-operational-policy.txt": "c0e2c6d30c855a13a0e90ad3ba5f3d249d91154a9a99e07aaa454b83cd4049f5",
+    "official-provenance.json": "627308a2371047ad487c607bc62f64ccdb121d6b425691d4689e4919c7bf4465",
+    "onboarding-corrected.csv": "415da0eebc88fad143610600adf28b66e3e868ee190a41f99c3f17535f1f8547",
+    "onboarding-original.csv": "68ea6e50e1cda7d5d9227af9e825ed6c0e16283e4901d5338440fc32f2dfe5b3",
+    "profile.json": "a7cc2706bcf756ca51f36961b2b620a68375a3b72328248ee28a0f2631dd2d51",
+    "rbi-customer-identification-excerpt.txt": "4cfac9531d2e28d850fd5563722e2c534ab8356311ba6d2703515a39551bb516",
+    "simulation-approval-standard-v1.txt": "514419a4fa996e740fa24b4db76fcf63b7d80b82be1c66f3c4598612f1df0df0",
+    "simulation-approval-standard-v2.txt": "2909267ae5082ae2cd61af6ce872afb94caef0b346ca3f7afa7d53ba6596a7ce",
+    "simulation-independent-review-standard.txt": "8b94ad7430cb918af4740e8a4b8015376405cb66828bfe42ea2b278059b5e878",
+    "simulation-operational-standard.txt": "61e722f48054e45a6109f332c400d15e9a5da419d89db3e9b351faed7312551f"
+  },
+  "expected_original_rows": 40,
+  "expected_timestamp_failures": 5,
+  "data_classification": "Fictional bank data; official excerpt separately attributed; regulatory simulations are not law."
+}

@@ -1,0 +1,3 @@
+SYNTHETIC REGULATION B — for integration demonstration only, not law.
+A bank must retain account closure records for seven years after the account is closed.
+The bank must suspend deletion when a preservation order applies, until the order is lifted.

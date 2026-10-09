@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "protocol_sha256": "af2f5083ce546c452e32300de2adb649056beb01ddf84daf6b4895c7e97f9365",
+  "frozen_at": "2026-10-04T00:00:00+05:30",
+  "cases": [
+    {
+      "id": "pair-a-fail",
+      "family_id": "synthetic-onboarding-v1",
+      "material": "synthetic",
+      "split": "development",
+      "critical_categories": [
+        "failed_execution"
+      ],
+      "inputs": {
+        "regulation": {
+          "path": "../examples/document-pairs/regulation-a.txt",
+          "sha256": "3f09461cfbbb457cac93ec9a508f8ce303ac7aac082062d4e62d0097d3f99b91"
+        },
+        "policy": {
+          "path": "../examples/document-pairs/policy-a.txt",
+          "sha256": "b034063fbe28024c87495199473070f2962d7faee638c9e61f7ef7125dceb5d7"
+        },
+        "profile": {
+          "path": "../examples/document-pairs/profile.json",
+          "sha256": "603e534f1f6d3dfb425a2505121f2aa6b2d601df72b239e7ac4ee705ae19db0a"
+        },
+        "evidence": {
+          "path": "../examples/document-pairs/evidence-fail.csv",
+          "sha256": "5f5c16b1cf5b5482a5eaee352737cfcd5e735b7dd0869beaa72cf5522738cb52"
+        },
+        "context": {
+          "path": "../examples/document-pairs/evidence-context.json",
+          "sha256": "a4646d5ba3007313dde0b976a729c33105fd1aba2c007a41e4f38825ba41e8b3"
+        }
+      }
+    },
+    {
+      "id": "pair-a-pass",
+      "family_id": "synthetic-onboarding-v1",
+      "material": "synthetic",
+      "split": "development",
+      "critical_categories": [],
+      "inputs": {
+        "regulation": {
+          "path": "../examples/document-pairs/regulation-a.txt",
+          "sha256": "3f09461cfbbb457cac93ec9a508f8ce303ac7aac082062d4e62d0097d3f99b91"
+        },
+        "policy": {
+          "path": "../examples/document-pairs/policy-a.txt",
+          "sha256": "b034063fbe28024c87495199473070f2962d7faee638c9e61f7ef7125dceb5d7"
+        },
+        "profile": {
+          "path": "../examples/document-pairs/profile.json",
+          "sha256": "603e534f1f6d3dfb425a2505121f2aa6b2d601df72b239e7ac4ee705ae19db0a"
+        },
+        "evidence": {
+          "path": "../examples/document-pairs/evidence-pass.csv",
+          "sha256": "c2597966e83f0d3ee5f2125826c48caf61b1f31a896f2502ea4bc4a0fb9b6fe5"
+        },
+        "context": {
+          "path": "../examples/document-pairs/evidence-context.json",
+          "sha256": "a4646d5ba3007313dde0b976a729c33105fd1aba2c007a41e4f38825ba41e8b3"
+        }
+      }
+    },
+    {
+      "id": "pair-b-policy-only",
+      "family_id": "synthetic-onboarding-v1",
+      "material": "synthetic",
+      "split": "development",
+      "critical_categories": [
+        "policy_only",
+        "missing_evidence"
+      ],
+      "inputs": {
+        "regulation": {
+          "path": "../examples/document-pairs/regulation-b.txt",
+          "sha256": "a49aabe95bbaef013d982fe8b50064202f3e9fb75df7f5e59f524a9d1e928fb6"
+        },
+        "policy": {
+          "path": "../examples/document-pairs/policy-b.txt",
+          "sha256": "3cd2bf4c91fa93c3e1c86f60661a4a06b9206eaca3c30a8a738f9f0bc55bb93d"
+        },
+        "profile": {
+          "path": "../examples/document-pairs/profile.json",
+          "sha256": "603e534f1f6d3dfb425a2505121f2aa6b2d601df72b239e7ac4ee705ae19db0a"
+        }
+      }
+    }
+  ]
+}
